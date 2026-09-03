@@ -1,417 +1,298 @@
-# AI Workplace Companion
+# AI Workplace Productivity Assistant
 
-AI Workplace Productivity Assistant — Build Prompt
+An AI-powered workplace productivity application designed to help professionals complete everyday tasks faster and more efficiently.
 
-Build a modern, responsive SaaS-style web application called AI Workplace Productivity Assistant.
+The **AI Workplace Productivity Assistant** provides a simple, modern workspace where users can generate professional emails, research topics, summarize information, and interact with an AI workplace assistant — without creating an account or signing in.
 
-Core Requirements
+## Project Overview
 
-Create a professional AI productivity tool for workplace users with three main features:
+The AI Workplace Productivity Assistant is a responsive web application focused on practical workplace automation using artificial intelligence.
 
-Smart Email Generator
+The application provides three core AI experiences:
 
-AI Research Assistant
+* **Smart Email Generator** — Create professional emails based on the user's purpose, audience, tone, and instructions.
+* **AI Research Assistant** — Research topics, generate summaries, identify key insights, and provide recommendations.
+* **AI Workplace Chatbot** — Interact with an AI assistant for writing, brainstorming, planning, summarization, and other workplace tasks.
 
-AI Workplace Chatbot
+The application is designed as a lightweight, accessible experience with **no registration, authentication, or custom backend**.
 
-The application must be immediately accessible.
+AI responses are generated dynamically based on the user's actual input rather than using predefined or hardcoded responses.
 
-No Authentication
+---
 
-Do NOT create registration, login, sign-in, authentication, user accounts, or onboarding.
+## Features Implemented
 
-When a user opens the application, they should immediately see the dashboard and be able to use the tools.
+### ✉️ Smart Email Generator
 
-No Backend
+* Generate professional workplace emails using AI
+* Select different writing tones:
 
-Do not create or require a custom backend, database, authentication system, or user-management system.
+  * Formal
+  * Friendly
+  * Persuasive
+* Select desired response length:
 
-Keep the application frontend-focused.
+  * Concise
+  * Balanced
+  * Detailed
+* Provide recipient, purpose, key points, and additional instructions
+* Generate a subject line and complete email body
+* Edit generated content
+* Copy generated emails
+* Regenerate AI responses
+* Save generated emails locally
 
-However, the AI features must use real AI generation. Do not use hardcoded, predefined, fake, or generic responses.
+### 🔎 AI Research Assistant
 
-Connect the AI functionality to an appropriate AI API/integration available to the project so that responses are dynamically generated from the user's actual prompts and inputs.
+* Enter any research topic
+* Generate AI-powered summaries
+* Request different research formats:
 
-If an API key or AI provider configuration is required, structure the application so it is easy to configure.
+  * Executive Summary
+  * Key Insights
+  * Recommendations
+  * Business Brief
+* Generate business insights and recommendations
+* Display research results in structured sections
+* Edit generated results
+* Copy results
+* Regenerate responses
+* Save research locally
 
-Design
+### 💬 AI Workplace Chatbot
 
-Use a clean, modern, professional B2B SaaS design.
+* Interactive AI workplace assistant
+* Responds to real user prompts using AI
+* Suggested workplace prompts
+* Conversation interface
+* Current-session conversation context
+* Copy AI responses
+* Edit responses
+* Regenerate responses
+* Save useful responses locally
 
-Primary colors:
+### 📊 Modern Dashboard
 
-Navy
+* Professional SaaS-style dashboard
+* Responsive sidebar navigation
+* Quick access to all AI tools
+* Clean navy and light-blue visual design
+* Responsive cards and layouts
+* Mobile-friendly navigation
+* AI productivity tips
+* Clear responsible AI messaging
 
-Light blue
+### 💾 Local Saved Work
 
-White
+* Save generated emails
+* Save research results
+* Save useful AI chat responses
+* View saved content
+* Edit saved content
+* Copy saved content
+* Delete saved content
 
-Very light gray backgrounds
+Saved content is stored locally in the user's browser and does not require a database.
 
-Suggested palette:
+### 🛡️ Responsible AI
 
-Navy: #0B1F3A
+The application reminds users that:
 
-Blue: #2563EB
+> AI-generated content may contain errors or omissions. Review important information before using or sharing it.
 
-Light Blue: #DBEAFE
+Users are also encouraged not to enter confidential or sensitive workplace information unless permitted by their organization's policies.
 
-Background: #F8FAFC
+---
 
-Text: #0F172A
+## Technologies and Tools Used
 
-Secondary text: #64748B
+### Frontend
 
-Use:
+* **React** — Component-based user interface
+* **TypeScript** — Type-safe application development
+* **Vite** — Fast development and build tooling
 
-Rounded cards
+### Styling & UI
 
-Subtle borders
+* **Tailwind CSS** — Responsive styling and design system
+* **Modern SaaS UI principles** — Cards, spacing, typography, responsive layouts
+* **Lucide Icons** — Clean interface icons
 
-Soft shadows
+### AI
 
-Generous whitespace
+* **AI API / AI Provider Integration** — Dynamic AI-generated responses based on user prompts
 
-Modern typography
+> The application is designed to use real AI generation rather than predefined or hardcoded responses.
 
-Clear visual hierarchy
+### Client-Side Storage
 
-Professional icons
+* **Browser Local Storage** — Used for saved work and temporary user preferences
+* No custom database required
 
-Smooth but minimal animations
+### Development & Deployment
 
-Avoid excessive gradients, neon colors, clutter, and unnecessary decorative elements.
+* **GitHub** — Source code management and project hosting
+* **Lovable** — Application development and UI generation
+* **Vite** — Local development and production builds
 
-Dashboard
+---
 
-Create a responsive dashboard with a left sidebar.
+## Application Architecture
 
-Sidebar navigation:
+The application follows a lightweight frontend-focused architecture:
 
-Dashboard
+```text
+User
+  │
+  ▼
+AI Workplace Productivity Assistant
+  │
+  ├── Dashboard
+  │
+  ├── Smart Email Generator
+  │       │
+  │       ▼
+  │    AI Provider
+  │
+  ├── Research Assistant
+  │       │
+  │       ▼
+  │    AI Provider
+  │
+  ├── AI Workplace Chat
+  │       │
+  │       ▼
+  │    AI Provider
+  │
+  └── Saved Work
+          │
+          ▼
+     Browser Local Storage
+```
 
-Email Generator
+The application does not require:
 
-Research Assistant
+* User registration
+* User login
+* Authentication
+* A custom backend
+* A database
+* Server-side user accounts
 
-AI Chat
+---
 
-Also include:
+## Setup Instructions
 
-Saved Work
+### 1. Clone the Repository
 
-Settings
+```bash
+git clone https://github.com/YOUR-USERNAME/ai-workplace-productivity-assistant.git
+```
 
-These can use local browser storage if needed, but do not create a backend.
+Navigate into the project:
 
-Dashboard content:
+```bash
+cd ai-workplace-productivity-assistant
+```
 
-Welcome message
+### 2. Install Dependencies
 
-"Good morning 👋"
+Install the required packages:
 
-"Your AI workplace assistant is ready to help you get more done."
+```bash
+npm install
+```
 
-Create three main feature cards:
+### 3. Configure the AI Provider
 
-Smart Email Generator
-
-"Generate professional workplace emails using AI."
-
-Button: Generate Email
-
-Research Assistant
-
-"Research topics, summarize information, and generate actionable insights."
-
-Button: Start Research
-
-AI Workplace Chat
-
-"Ask AI for help with workplace tasks, ideas, writing, planning, and decision-making."
-
-Button: Open AI Chat
-
-Add a small "AI Productivity Tip" card and a responsible AI disclaimer.
-
-Smart Email Generator
-
-Create a dedicated email generation page.
-
-Inputs:
-
-Recipient / Audience
-
-Email Purpose
-
-Key Points
-
-Tone
-
-Formal
-
-Friendly
-
-Persuasive
-
-Length
-
-Concise
-
-Balanced
-
-Detailed
-
-Additional Instructions
-
-Button:
-
-Generate Email
-
-When clicked, send the user's actual input to the AI and generate a genuinely customized email.
-
-Do NOT return generic sample text.
-
-The AI output should include:
-
-Subject
-
-Email body
-
-Professional formatting
-
-Place the result in an editable text editor.
-
-Actions:
-
-Edit
-
-Copy
-
-Regenerate
-
-Save
-
-The user must be able to modify the generated email before copying it.
-
-AI Research Assistant
-
-Create a dedicated research page.
-
-Input:
-
-Research Topic
+Create a `.env` file in the root directory if your selected AI provider requires an API key.
 
 Example:
 
-"How artificial intelligence is changing workplace productivity"
+```env
+VITE_AI_API_KEY=your_api_key_here
+```
 
-Additional options:
+**Important:** Never commit API keys or other secrets to GitHub.
 
-Quick Overview
+Add your environment file to `.gitignore`:
 
-Detailed Summary
+```text
+.env
+.env.local
+```
 
-Business Insights
+Use the AI provider's recommended secure integration approach for production deployments.
 
-Recommendations
+### 4. Start the Development Server
 
-Pros & Cons
+Run:
 
-Output format options:
-
-Executive Summary
-
-Key Insights
-
-Recommendations
-
-Business Brief
-
-When the user clicks Start Research, use the AI to generate a response based on the user's actual topic and selected options.
-
-Do NOT use hardcoded research answers.
-
-Display the AI response in sections:
-
-Executive Summary
-
-Key Insights
-
-Opportunities
-
-Recommendations
-
-Considerations
-
-Allow the result to be edited, copied, regenerated, and saved.
-
-Clearly distinguish between AI-generated information and verified information.
-
-AI Workplace Chat
-
-Create a modern chatbot interface.
-
-Welcome message:
-
-"Hi! I'm your AI workplace assistant. How can I help you today?"
-
-Provide suggested prompts such as:
-
-Draft a professional email
-
-Help me prepare for a meeting
-
-Create a project plan
-
-Improve this message
-
-Brainstorm ideas
-
-Summarize a topic
-
-The suggestions should populate the chat input rather than return predetermined answers.
-
-Chat input:
-
-"Ask anything about your workplace task..."
-
-When the user sends a message, send the actual user prompt to the AI and display the AI-generated response.
-
-Do NOT use canned chatbot responses.
-
-Allow users to:
-
-Copy responses
-
-Edit responses
-
-Regenerate responses
-
-Save responses
-
-Maintain conversation context during the current browser session where possible.
-
-Structured AI Prompts
-
-Use structured inputs to improve AI results:
-
-Context
-What is the situation?
-
-Task
-What should the AI do?
-
-Audience
-Who is the output for?
-
-Tone
-How should it sound?
-
-Desired Output
-What format should the AI use?
-
-Include an optional "Improve Prompt" or "Add Context" section.
-
-Saved Work
-
-Create a simple Saved Work page using local browser storage only.
-
-Users can save:
-
-Generated emails
-
-Research results
-
-Chat responses
-
-No database or backend.
-
-Allow users to:
-
-View
-
-Edit
-
-Copy
-
-Delete saved items
-
-Responsible AI
-
-Display this disclaimer in the application:
-
-"AI-generated content may contain errors or omissions. Review important information before using or sharing it. Users remain responsible for reviewing and approving AI-generated content."
-
-Also remind users not to enter confidential or sensitive workplace information unless permitted by their organization's policies.
-
-Responsive Design
-
-The application must work properly on:
-
-Desktop
-
-Laptop
-
-Tablet
-
-Mobile
-
-Desktop should use a persistent sidebar.
-
-Mobile should use a collapsible navigation menu.
-
-All forms, AI outputs, chat messages, and buttons must be mobile-friendly.
-
-Important Technical/Product Rules
-
-No registration.
-
-No login.
-
-No authentication.
-
-No custom backend.
-
-No database.
-
-No hardcoded AI responses.
-
-No generic placeholder responses presented as AI.
-
-AI responses must be dynamically generated from the user's actual input.
-
-Use local browser storage only for saved work or temporary preferences.
-
-AI-generated outputs must be editable.
-
-Include loading, error, and retry states for AI requests.
-
-Keep the UI polished and professional.
-
-Do not add unnecessary features that increase complexity.
-
-Prioritize the three core AI experiences: Email Generator, Research Assistant, and AI Chat.
-
-The finished application should feel like a polished AI workplace productivity SaaS product that a professional could immediately open and use without creating an account.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/27a8c14d-8884-4a44-9097-ce00d9a9ad5e).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+The application will be available at the local development URL displayed in your terminal.
+
+### 5. Build for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## Usage
+
+Once the application is running:
+
+1. Open the application.
+2. No registration or login is required.
+3. Select a workplace productivity tool from the dashboard.
+4. Enter your request or structured prompt.
+5. Submit the request.
+6. Review the AI-generated response.
+7. Edit, copy, regenerate, or save the result.
+
+---
+
+## Responsible Use
+
+AI-generated content should be reviewed before being used in professional communications or decision-making.
+
+The application should not be used to process confidential, proprietary, personal, or otherwise sensitive workplace information unless the user is authorized to do so and the selected AI provider's policies permit it.
+
+Users remain responsible for reviewing and approving AI-generated content.
+
+---
+
+## Future Improvements
+
+Potential future enhancements include:
+
+* Document upload and analysis
+* Calendar and meeting assistance
+* Task and project planning
+* AI-powered meeting summaries
+* More AI writing tools
+* Advanced prompt templates
+* Export to PDF or Word
+* Additional AI providers
+* Optional user accounts and cloud synchronization
+* Team collaboration features
+
+---
+
+## License
+
+This project is intended as a demonstration of an AI-powered workplace productivity application.
+
+Add your preferred open-source license here if you plan to distribute the project publicly.
